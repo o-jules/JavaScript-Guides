@@ -1,9 +1,9 @@
 
 function unique(arr) {
-	return arr.reduce((p, c) => {
-		if (p.indexOf(c) < 0) p.push(c)
-		return p
-	}, [])
+  return arr.reduce((p, c) => {
+    if (p.indexOf(c) < 0) p.push(c)
+    return p
+  }, [])
 }
 
 // test:

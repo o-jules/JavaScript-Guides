@@ -1,0 +1,37 @@
+# Terms and definitions
+
+- type
+- primitive value
+- object
+- constructor
+- prototype
+- ordinary object
+- exotic object
+- standard object
+- built-in object
+- undefined value
+- Undefined type
+- null value
+- Null type
+- Boolean value: `true`, or `false`
+- Boolean type: {`true`, `false`}
+- Boolean object
+- String value
+- String type
+- String object
+- Number value
+- Number type
+- Number object
+- Infinity
+- NaN
+- Symbol value
+- Symbol type
+- Symbol object
+- function
+- built-in function
+- property
+- method
+- built-in method
+- attribute
+- own property
+- inherited property

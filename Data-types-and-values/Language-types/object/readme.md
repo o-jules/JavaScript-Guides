@@ -71,3 +71,16 @@ Attributes of an accessor property:
   - `[[Enumerable]]`: see `[[Enumerable]]` of data property.
 
   - `[[Configurable]]`: if fasle, attempts to delete the property, change the property to be a `data property`, or change its attributes will fail.
+
+
+Default Attribute Values:
+
+| Attribute Name     | Default Value |
+|--------------------|---------------|
+| `[[Value]]`        | undefined |
+| `[[Get]]`          | undefined |
+| `[[Set]]`          | undefined |
+| `[[Writable]]`     | false     |
+| `[[Enumerable]]`   | false     |
+| `[[Configurable]]` | false     |
+

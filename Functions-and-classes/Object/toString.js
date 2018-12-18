@@ -44,6 +44,17 @@ class CustomObject {};
     label: '[]',
     value: []
   },
+  // [object Set]
+  {
+    label: 'new Set()',
+    value: new Set()
+  },
+    // [object Map]
+  {
+    label: 'new Map()',
+    value: new Map()
+  },
+  // [object Object]
   {
     label: 'new CustomObject()',
     value: new CustomObject()

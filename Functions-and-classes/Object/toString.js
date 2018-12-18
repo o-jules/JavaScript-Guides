@@ -1,6 +1,8 @@
 // Object.prototype.toString.call()
 // [object Something]
 
+// Symbol.toStringTag 可以改变该行为
+
 [
   // [object Undefined]
   undefined,
@@ -20,6 +22,11 @@
 });
 
 class CustomObject {};
+class CustomToString {
+  get [Symbol.toStringTag]() {
+    return 'Custom-toString'
+  }
+};
 
 [
   // string
@@ -58,6 +65,11 @@ class CustomObject {};
   {
     label: 'new CustomObject()',
     value: new CustomObject()
+  },
+  // [Object Custom-toString]
+  {
+    label: 'new CustomToString()',
+    value: new CustomToString()
   }
 ].forEach(i => {
   console.log(`toString.call(${i.label})\t = ${Object.prototype.toString.call(i.value)}`)

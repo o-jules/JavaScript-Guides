@@ -21,6 +21,11 @@ type TrapName = (
 interface Trap {};
 ```
 
+## Proxy 构造函数的特点
+
+  - 缺少 prototype 属性
+  - target 参数必须是对象，否则会抛出异常
+
 ## Trap
 
 Proxy 的 trap 主要有：
@@ -65,3 +70,20 @@ Proxy 的 trap 主要有：
 
   - `construct? (target: T, argArray: any, newTarget?: any): object;`
     用于构造函数的 `new` 操作符.
+
+## Proxy 上的方法
+
+  - revocable
+
+    函数签名：
+    ```typescript
+    function revocable<T extends object>(target: T, handler: ProxyHandler<T>): { proxy: T; revoke: () => void; };
+    ```
+  
+    静态方法，用于生成一个 proxy 及取消它的 revoke 方法；当调用 revoke 后，再使用 proxy 会抛出异常。
+
+## Proxy 与 Object.defineProperty
+
+## Proxy 的应用
+
+著名的应用有 Vuejs 3.0 使用 Proxy 代替 Object.defineProperty 扩展了功能及提高了性能。
